@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { Provider } from "react-redux";
-import { AuthLayout, Login } from "./components/index.js";
+import { AuthLayout, Footer, Login } from "./components/index.js";
 import store from "./store/store.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -21,7 +21,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <>
+            <Home />,
+            <Footer />
+          </>
+        ),
       },
       {
         path: "/login",
@@ -43,7 +48,6 @@ const router = createBrowserRouter([
         path: "/all-posts",
         element: (
           <AuthLayout authentication>
-            {" "}
             <AllPosts />
           </AuthLayout>
         ),
