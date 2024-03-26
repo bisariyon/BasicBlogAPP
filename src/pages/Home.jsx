@@ -35,7 +35,7 @@ function Home() {
   return authStatus ? (
     <div className="w-full py-8 px-10">
       <div className="grid text-center py-2 mb-5">
-        <h1 className="text-5xl hover:font-bold text-yellow-200 font-semibold hover:text-green-700 italic ">This is Home page</h1>
+        <h1 className="text-5xl hover:font-bold text-yellow-200 font-semibold hover:text-green-700 italic ">Welcome to our blog</h1>
       </div>
 
       <Container>
